@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Old Standard TT', serif;
+  }
+  body {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  
+  /* NAVBAR STYLING STARTS */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 120px;
+    text-align: center;
+
+    background-color: #181511;
+    color: #FFAE2B;
+  }
+  .nav-links a {
+    color: #ACA592;
+  }
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 11px;
+  }
+
+
+  .menu a:hover {
+    color: #FFAE2B;
+  }
+  .menu li {
+    padding: 5px 28px;
+  }
+
+  .btn{
+    border: 1px solid #FFAE2B;
+    border-radius: 0px;
+    width: 147px;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 11px;
+    line-height: 22px;
+    color: #FFAE2B;
+    cursor: pointer;
+  }
+  /* DROPDOWN MENU */
+  .services {
+    position: relative;
+  }
+  .dropdown {
+    background-color: #4334;
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+  }
+  .dropdown li + li {
+    margin-top: 10px;
+  }
+  .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+  }
+  .dropdown li:hover {
+    background-color: #4334;
+  }
+  .services:hover .dropdown {
+    display: block;
+  }
+  
+  /*RESPONSIVE NAVBAR MENU STARTS*/
+  /* CHECKBOX HACK */
+  input[type="checkbox"] {
+    display: none;
+    top: 0;
+    transition: all 2s;
+  }
+  /*HAMBURGER MENU*/
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  /* APPLYING MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      background-color: #4334;
+      right: 0;
+      left: 0;
+      top: 4.9rem;
+      text-align: center;
+      padding: 16px 0;
+      height: 100vh;
+      transition: 2s ease;
+    }
+    .menu li:hover {
+      display: inline-block;
+      background-color: #433354;
+      transition: 0.3s ease;
+    }
+    .menu li {
+      margin-top: 12px;
+      width: 100%;
+    }
+    input[type="checkbox"]:checked ~ .menu {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+    .hamburger:hover {
+      color: gray;
+      transition: color;
+      transition-delay: 200ms;
+    }
+    .dropdown {
+      left: 50%;
+      top: 30px;
+      transform: translateX(35%);
+    }
+    .dropdown li:hover {
+      background-color: #433354;
+    }
+  }
+  
