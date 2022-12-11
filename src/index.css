@@ -47,6 +47,7 @@ code {
   text-align: center;
   letter-spacing: 1px;
   color: #FFFFFF;
+  flex-wrap: wrap;
 }
 
 .header_btn{
@@ -103,6 +104,7 @@ code {
 .template_page7{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .laptop{
@@ -138,6 +140,7 @@ code {
 .squares{
   padding: 120px;
   display: flex;
+  flex-wrap: wrap
 }
 
 .square1{
@@ -205,6 +208,8 @@ code {
 .section2{
     display: flex;
     margin-top: -15px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
 
